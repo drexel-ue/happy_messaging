@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "863265955705",
+    "project_id": "happy-messaging-b2b73",
+    "storage_bucket": "happy-messaging-b2b73.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863265955705:android:8484ab9673c04c76fd99a8",
+        "android_client_info": {
+          "package_name": "com.example.receive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFWwWLWrEmO83F2uNbI6hjIlXo8hSQR6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

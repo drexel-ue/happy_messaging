@@ -1,10 +1,13 @@
 import 'package:common/common.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:receive/firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   final directory = await getApplicationDocumentsDirectory();
   await Hive.initFlutter(directory.path);
   await Hive.openBox('notifications');
