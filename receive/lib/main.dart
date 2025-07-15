@@ -1,3 +1,4 @@
+import 'package:common/common.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
@@ -13,7 +14,6 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -74,12 +74,12 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomSheet: SizedBox(
         width: double.infinity,
         child: Padding(
-          padding: EdgeInsetsGeometry.all(24.0),
+          padding: allPadding24,
           child: Wrap(
             spacing: 8.0,
             runSpacing: 8.0,
             children: [
-              for (final topic in _Topic.values) //
+              for (final topic in Topic.values) //
                 _TopicToggle(
                   label: topic.name,
                   subscribed: false,
@@ -91,13 +91,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-}
-
-enum _Topic {
-  bears,
-  cats,
-  dogs,
-  unicorns,
 }
 
 class _TopicToggle extends StatelessWidget {
@@ -117,7 +110,7 @@ class _TopicToggle extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(label),
-        SizedBox(width: 8.0),
+        horizontalMargin8,
         Switch.adaptive(
           value: subscribed,
           onChanged: onChanged,
